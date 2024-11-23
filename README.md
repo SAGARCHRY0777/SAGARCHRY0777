@@ -104,3 +104,15 @@
 <div align="center">
   <img src="https://media.giphy.com/media/3o7aD3d3AtTjZ5d6wA/giphy.gif" width="400" height="200" />
 </div>
+
+
+
+
+
+
+
+<hr>
+
+<p align="center">
+  <img src="https://metrics.lecoq.io/sagarchry0777" alt="Dynamic GitHub Metrics">
+</p>
