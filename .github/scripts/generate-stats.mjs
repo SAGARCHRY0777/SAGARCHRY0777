@@ -58,6 +58,9 @@ query ($login: String!, $from: DateTime!) {
     createdAt
     followers { totalCount }
     following { totalCount }
+    # Every public repo, forks included — matches the count shown on the profile page.
+    allRepositories: repositories(ownerAffiliations: OWNER, privacy: PUBLIC) { totalCount }
+    # Own work only: forks would badly skew the language breakdown.
     repositories(first: 100, ownerAffiliations: OWNER, isFork: false, orderBy: {field: STARGAZERS, direction: DESC}) {
       totalCount
       nodes {
@@ -147,8 +150,9 @@ function mockData() {
       createdAt: "2023-12-18T09:56:55Z",
       followers: { totalCount: 2 },
       following: { totalCount: 5 },
+      allRepositories: { totalCount: 46 },
       repositories: {
-        totalCount: 46,
+        totalCount: 29,
         nodes: [
           { stargazerCount: 3, forkCount: 1, languages: { edges: [{ size: 480000, node: { name: "Python", color: "#3572A5" } }] } },
           { stargazerCount: 1, forkCount: 0, languages: { edges: [{ size: 210000, node: { name: "Jupyter Notebook", color: "#DA5B0B" } }] } },
@@ -254,7 +258,12 @@ function statsCard(d) {
     { label: "CONTRIBUTIONS", value: compact(total), sub: `since ${fmtDate(d.user.createdAt.slice(0, 10))}`, color: C.cyan },
     { label: "CURRENT STREAK", value: `${st.current}`, sub: st.current ? `${st.current === 1 ? "day" : "days"} · ${st.currentStart ? fmtDate(st.currentStart) : ""}` : "start one today", color: C.pink },
     { label: "LONGEST STREAK", value: `${st.longest}`, sub: st.longestStart ? `${fmtDate(st.longestStart)} →` : "—", color: C.violet },
-    { label: "REPOSITORIES", value: compact(repos.totalCount), sub: `${compact(stars)} stars · ${compact(forks)} forks`, color: C.indigo },
+    {
+      label: "REPOSITORIES",
+      value: compact(d.user.allRepositories?.totalCount ?? repos.totalCount),
+      sub: `${compact(repos.totalCount)} original${stars ? ` · ${compact(stars)} star${stars === 1 ? "" : "s"}` : ""}${forks ? ` · ${compact(forks)} fork${forks === 1 ? "" : "s"}` : ""}`,
+      color: C.indigo,
+    },
   ];
 
   const cols = tiles.map((t, i) => {
