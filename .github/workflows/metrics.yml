@@ -1,0 +1,84 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# 📊 GitHub Metrics  (lowlighter/metrics)
+# Generates self-hosted stat cards — no third-party rate limits — and commits
+# them to the `metrics` branch, keeping `main` clean. README embeds:
+#   https://raw.githubusercontent.com/SAGARCHRY0777/SAGARCHRY0777/metrics/metrics/overview.svg
+#   https://raw.githubusercontent.com/SAGARCHRY0777/SAGARCHRY0777/metrics/metrics/habits.svg
+#
+# ONE-TIME SETUP (required):
+#   1. Create a classic PAT → https://github.com/settings/tokens/new
+#      scopes: public_repo, read:user, repo:status, read:org
+#   2. Repo → Settings → Secrets and variables → Actions → New repository secret
+#      Name: METRICS_TOKEN   Value: <the PAT>
+#   3. Actions tab → "📊 Metrics" → Run workflow
+# ─────────────────────────────────────────────────────────────────────────────
+name: 📊 Metrics
+
+on:
+  schedule:
+    - cron: "0 0 * * *" # daily at 00:00 UTC (05:30 IST)
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: metrics
+  cancel-in-progress: true
+
+jobs:
+  overview:
+    name: Overview · languages · calendar
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: SAGARCHRY0777
+          template: classic
+          filename: metrics/overview.svg
+          committer_branch: metrics
+          committer_message: "chore(metrics): update overview"
+          config_timezone: Asia/Kolkata
+          config_display: large
+          config_order: base.header, base.activity+community, base.repositories, languages, isocalendar
+          base: header, activity, community, repositories, metadata
+          base_indepth: yes
+          plugin_languages: yes
+          plugin_languages_details: bytes-size, percentage
+          plugin_languages_limit: 8
+          plugin_languages_sections: most-used
+          plugin_languages_colors: github
+          plugin_languages_ignored: html, css, jupyter notebook
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
+
+  habits:
+    name: Habits · achievements
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    needs: overview # serialise so both jobs never push to `metrics` at once
+    steps:
+      - uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: SAGARCHRY0777
+          template: classic
+          filename: metrics/habits.svg
+          committer_branch: metrics
+          committer_message: "chore(metrics): update habits"
+          config_timezone: Asia/Kolkata
+          config_display: large
+          base: ""
+          plugin_habits: yes
+          plugin_habits_facts: yes
+          plugin_habits_charts: yes
+          plugin_habits_charts_type: classic
+          plugin_habits_days: 30
+          plugin_achievements: yes
+          plugin_achievements_display: compact
+          plugin_achievements_threshold: C
+          plugin_achievements_secrets: yes

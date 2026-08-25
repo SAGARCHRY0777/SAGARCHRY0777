@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="320" viewBox="0 0 420 320" role="img" aria-label="Animated neural network">
+  <defs>
+    <linearGradient id="e" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22d3ee"/><stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+    <filter id="g" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="r"><rect width="420" height="320" rx="20"/></clipPath>
+  </defs>
+  <style>
+    .edge { fill:none; stroke:url(#e); stroke-width:1.4; stroke-opacity:.35; }
+    .flow { fill:none; stroke:#67e8f9; stroke-width:1.6; stroke-dasharray:6 90; stroke-linecap:round; animation: flow 3s linear infinite; }
+    .f2 { animation-delay:-1s } .f3 { animation-delay:-2s } .f4 { animation-delay:-.5s } .f5 { animation-delay:-1.5s } .f6 { animation-delay:-2.5s }
+    @keyframes flow { to { stroke-dashoffset:-96 } }
+    .n { fill:#0f172a; stroke:#22d3ee; stroke-width:2; }
+    .n2 { stroke:#a78bfa } .n3 { stroke:#f472b6 }
+    .core { animation: beat 2.4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+    .b2 { animation-delay:-.8s } .b3 { animation-delay:-1.6s }
+    @keyframes beat { 0%,100% { transform:scale(1); opacity:.7 } 50% { transform:scale(1.35); opacity:1 } }
+    .lbl { font: 600 11px "JetBrains Mono", "Fira Code", Consolas, monospace; fill:#64748b; letter-spacing:2px; }
+    .out { font: 700 12px "Segoe UI", Helvetica, Arial, sans-serif; fill:#e2e8f0; }
+  </style>
+  <g clip-path="url(#r)">
+    <rect width="420" height="320" fill="#0b1020"/>
+    <rect width="420" height="320" fill="none" stroke="#1e293b" stroke-width="2" rx="20"/>
+
+    <g class="edge">
+      <path d="M70 90 C135 90 135 70 200 70"/><path d="M70 90 C135 90 135 130 200 130"/><path d="M70 90 C135 90 135 190 200 190"/><path d="M70 90 C135 90 135 250 200 250"/>
+      <path d="M70 160 C135 160 135 70 200 70"/><path d="M70 160 C135 160 135 130 200 130"/><path d="M70 160 C135 160 135 190 200 190"/><path d="M70 160 C135 160 135 250 200 250"/>
+      <path d="M70 230 C135 230 135 70 200 70"/><path d="M70 230 C135 230 135 130 200 130"/><path d="M70 230 C135 230 135 190 200 190"/><path d="M70 230 C135 230 135 250 200 250"/>
+      <path d="M200 70 C265 70 265 120 330 120"/><path d="M200 130 C265 130 265 120 330 120"/><path d="M200 190 C265 190 265 120 330 120"/><path d="M200 250 C265 250 265 120 330 120"/>
+      <path d="M200 70 C265 70 265 200 330 200"/><path d="M200 130 C265 130 265 200 330 200"/><path d="M200 190 C265 190 265 200 330 200"/><path d="M200 250 C265 250 265 200 330 200"/>
+    </g>
+    <path class="flow"    d="M70 90 C135 90 135 130 200 130"/>
+    <path class="flow f2" d="M70 160 C135 160 135 250 200 250"/>
+    <path class="flow f3" d="M70 230 C135 230 135 70 200 70"/>
+    <path class="flow f4" d="M200 130 C265 130 265 120 330 120"/>
+    <path class="flow f5" d="M200 250 C265 250 265 200 330 200"/>
+    <path class="flow f6" d="M200 70 C265 70 265 200 330 200"/>
+
+    <g filter="url(#g)">
+      <circle class="n" cx="70" cy="90" r="11"/><circle class="n" cx="70" cy="160" r="11"/><circle class="n" cx="70" cy="230" r="11"/>
+      <circle class="n n2" cx="200" cy="70" r="11"/><circle class="n n2" cx="200" cy="130" r="11"/><circle class="n n2" cx="200" cy="190" r="11"/><circle class="n n2" cx="200" cy="250" r="11"/>
+      <circle class="n n3" cx="330" cy="120" r="13"/><circle class="n n3" cx="330" cy="200" r="13"/>
+    </g>
+    <g fill="#22d3ee"><circle class="core" cx="70" cy="90" r="4"/><circle class="core b2" cx="70" cy="160" r="4"/><circle class="core b3" cx="70" cy="230" r="4"/></g>
+    <g fill="#a78bfa"><circle class="core b3" cx="200" cy="70" r="4"/><circle class="core" cx="200" cy="130" r="4"/><circle class="core b2" cx="200" cy="190" r="4"/><circle class="core b3" cx="200" cy="250" r="4"/></g>
+    <g fill="#f472b6"><circle class="core b2" cx="330" cy="120" r="5"/><circle class="core" cx="330" cy="200" r="5"/></g>
+
+    <text class="lbl" x="70" y="290" text-anchor="middle">INPUT</text>
+    <text class="lbl" x="200" y="290" text-anchor="middle">HIDDEN</text>
+    <text class="lbl" x="330" y="290" text-anchor="middle">OUTPUT</text>
+    <text class="out" x="352" y="124">detect</text>
+    <text class="out" x="352" y="204">depth</text>
+    <text class="lbl" x="210" y="28" text-anchor="middle" style="fill:#7dd3fc">forward( x ) → ŷ</text>
+  </g>
+</svg>
