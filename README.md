@@ -181,16 +181,16 @@ End‑to‑end **MLOps pipeline** — versioned data, tracked experiments, repro
 
 <br/>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=SAGARCHRY0777&theme=tokyonight&hide_border=true&background=0B1020&ring=22D3EE&fire=F472B6&currStreakLabel=22D3EE&sideLabels=9FB3C8&dates=64748B&currStreakNum=FFFFFF&sideNums=FFFFFF&stroke=1E293B" />
-  <img src="https://streak-stats.demolab.com?user=SAGARCHRY0777&theme=default&hide_border=true&ring=818CF8&fire=F472B6&currStreakLabel=6366F1" width="62%" alt="GitHub streak" />
-</picture>
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=SAGARCHRY0777&theme=tokyonight" width="100%" alt="Profile details" />
 
 <br/><br/>
 
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=SAGARCHRY0777&theme=tokyonight" width="32%" alt="Repos per language" />
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=SAGARCHRY0777&theme=tokyonight" width="32%" alt="Most committed language" />
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=SAGARCHRY0777&theme=tokyonight&utcOffset=5.5" width="32%" alt="Productive time (IST)" />
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=SAGARCHRY0777&theme=tokyonight" width="48%" alt="Contribution stats" />
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=SAGARCHRY0777&theme=tokyonight" width="48%" alt="Repos per language" />
+<br/><br/>
+
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=SAGARCHRY0777&theme=tokyonight" width="48%" alt="Most committed language" />
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=SAGARCHRY0777&theme=tokyonight&utcOffset=5.5" width="48%" alt="Productive time (IST)" />
 
 <br/><br/>
 
