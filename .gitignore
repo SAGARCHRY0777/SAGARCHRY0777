@@ -1,0 +1,9 @@
+# Generated stat cards — built by .github/workflows/stats.yml and published
+# to the `metrics` branch, never committed to main.
+dist/
+
+# OS / editor noise
+Thumbs.db
+.DS_Store
+.vscode/
+node_modules/

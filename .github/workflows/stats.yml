@@ -1,0 +1,54 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# 📊 Profile Stat Cards
+# Runs .github/scripts/generate-stats.mjs, which queries the GitHub GraphQL API
+# with the built-in GITHUB_TOKEN and renders SVG cards matching the hero design,
+# then publishes them to the `metrics` branch. README embeds:
+#   .../SAGARCHRY0777/metrics/stats.svg
+#   .../SAGARCHRY0777/metrics/languages.svg
+#   .../SAGARCHRY0777/metrics/calendar.svg
+#
+# No personal access token, no third-party service, no rate limits.
+# ─────────────────────────────────────────────────────────────────────────────
+name: 📊 Stat Cards
+
+on:
+  schedule:
+    - cron: "0 */6 * * *" # four times a day
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: stats
+  cancel-in-progress: true
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Generate stat cards
+        run: node .github/scripts/generate-stats.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_USER: ${{ github.repository_owner }}
+
+      - name: Publish to `metrics` branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: metrics
+          build_dir: dist
+          commit_message: "chore(stats): refresh profile stat cards"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
