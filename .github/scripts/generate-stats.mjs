@@ -101,6 +101,46 @@ async function gql(query, variables) {
   return json.data;
 }
 
+/**
+ * Per-day contribution counts taken from the calendar GitHub already renders
+ * publicly on the profile page.
+ *
+ * The GraphQL contributionsCollection below is fetched with the workflow's
+ * built-in GITHUB_TOKEN, which is scoped to this repository — under it the
+ * calendar came back missing contributions made in other repositories, so the
+ * most recent weeks rendered blank. This endpoint needs no token at all and
+ * reports exactly what the profile shows.
+ */
+async function fetchCalendar(user) {
+  const res = await fetch(`https://github.com/users/${user}/contributions`, {
+    headers: { "User-Agent": `${user}-profile-stats`, Accept: "text/html" },
+  });
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  const html = await res.text();
+
+  // Each cell carries only a 0-4 intensity level; the exact number lives in the
+  // tooltip bound to it by id.
+  const counts = new Map();
+  const tooltip = /<tool-tip[^>]*\sfor="([^"]+)"[^>]*>([^<]*)<\/tool-tip>/g;
+  for (const m of html.matchAll(tooltip)) {
+    const text = m[2].trim();
+    counts.set(m[1], /^No contributions/i.test(text) ? 0 : parseInt(text, 10) || 0);
+  }
+
+  const days = new Map();
+  const cell = /<td[^>]*class="ContributionCalendar-day"[^>]*>/g;
+  for (const m of html.matchAll(cell)) {
+    const date = /data-date="([^"]+)"/.exec(m[0])?.[1];
+    const id = /\sid="([^"]+)"/.exec(m[0])?.[1];
+    if (date) days.set(date, counts.get(id) ?? 0);
+  }
+
+  // A markup change upstream would otherwise yield a silently empty calendar,
+  // so treat a short result as failure and let the caller fall back.
+  if (days.size < 300) throw new Error(`parsed only ${days.size} days`);
+  return days;
+}
+
 /** GitHub only returns one year of contributions per query, so walk year by year. */
 async function fetchAll() {
   const first = await gql(QUERY, { login: USER, from: new Date(Date.now() - 364 * 864e5).toISOString() });
@@ -132,6 +172,16 @@ async function fetchAll() {
       console.warn(`  ! skipped ${y}: ${e.message}`);
     }
   }
+  // Override the last year with the public profile calendar, the authoritative
+  // per-day source. Earlier years still come from the GraphQL walk above.
+  try {
+    const live = await fetchCalendar(USER);
+    for (const [date, n] of live) days.set(date, n);
+    console.log(`  ✓ calendar: ${live.size} days from the public profile`);
+  } catch (e) {
+    console.warn(`  ! calendar: falling back to GraphQL (${e.message})`);
+  }
+
   return { user, days, totals };
 }
 
