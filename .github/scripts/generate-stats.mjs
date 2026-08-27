@@ -404,8 +404,12 @@ function calendarCard(d) {
 
   const today = new Date();
   const end = new Date(Date.UTC(today.getUTCFullYear(), today.getUTCMonth(), today.getUTCDate()));
-  const start = new Date(end.getTime() - (WEEKS * 7 - 1) * 864e5);
-  start.setUTCDate(start.getUTCDate() - start.getUTCDay()); // align to Sunday
+  // Anchor the grid to the week containing today, then step back 52 weeks.
+  // Walking back 370 days first and snapping to Sunday afterwards moved the
+  // whole window earlier by up to six days, so the newest contributions fell
+  // off the right-hand edge and never appeared.
+  const start = new Date(end);
+  start.setUTCDate(start.getUTCDate() - start.getUTCDay() - (WEEKS - 1) * 7);
 
   const max = Math.max(1, ...d.days.values());
   const shade = (n) => {
