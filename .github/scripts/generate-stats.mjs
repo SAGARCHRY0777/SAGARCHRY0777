@@ -101,57 +101,6 @@ async function gql(query, variables) {
   return json.data;
 }
 
-/**
- * Per-day contribution counts taken from the calendar GitHub already renders
- * publicly on the profile page.
- *
- * The GraphQL contributionsCollection below is fetched with the workflow's
- * built-in GITHUB_TOKEN, which is scoped to this repository — under it the
- * calendar came back missing contributions made in other repositories, so the
- * most recent weeks rendered blank. This endpoint needs no token at all and
- * reports exactly what the profile shows.
- */
-async function fetchCalendar(user) {
-  // A plain fetch from an Actions runner can be served a different page than a
-  // browser gets, so send the headers a browser would.
-  const res = await fetch(`https://github.com/users/${user}/contributions`, {
-    headers: {
-      "User-Agent":
-        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36",
-      Accept: "text/html,application/xhtml+xml",
-      "Accept-Language": "en-GB,en;q=0.9",
-      "X-Requested-With": "XMLHttpRequest",
-    },
-  });
-  if (!res.ok) throw new Error(`HTTP ${res.status}`);
-  const html = await res.text();
-
-  // Each cell carries only a 0-4 intensity level; the exact number lives in the
-  // tooltip bound to it by id.
-  const counts = new Map();
-  const tooltip = /<tool-tip[^>]*\sfor="([^"]+)"[^>]*>([^<]*)<\/tool-tip>/g;
-  for (const m of html.matchAll(tooltip)) {
-    const text = m[2].trim();
-    counts.set(m[1], /^No contributions/i.test(text) ? 0 : parseInt(text, 10) || 0);
-  }
-
-  const days = new Map();
-  const cell = /<td[^>]*class="ContributionCalendar-day"[^>]*>/g;
-  for (const m of html.matchAll(cell)) {
-    const date = /data-date="([^"]+)"/.exec(m[0])?.[1];
-    const id = /\sid="([^"]+)"/.exec(m[0])?.[1];
-    if (date) days.set(date, counts.get(id) ?? 0);
-  }
-
-  // A markup change upstream would otherwise yield a silently empty calendar,
-  // so treat a short result as failure and let the caller fall back. The counts
-  // are reported too, to tell "markup moved" apart from "page came back empty".
-  if (days.size < 300) {
-    throw new Error(`parsed ${days.size} days / ${counts.size} tooltips from ${html.length}B`);
-  }
-  return days;
-}
-
 /** GitHub only returns one year of contributions per query, so walk year by year. */
 async function fetchAll() {
   const first = await gql(QUERY, { login: USER, from: new Date(Date.now() - 364 * 864e5).toISOString() });
@@ -183,23 +132,7 @@ async function fetchAll() {
       console.warn(`  ! skipped ${y}: ${e.message}`);
     }
   }
-  // Override the last year with the public profile calendar, the authoritative
-  // per-day source. Earlier years still come from the GraphQL walk above.
-  // The outcome is recorded in the card itself: workflow logs are not readable
-  // without a token, so without this a silent fallback looks identical to
-  // success in the published SVG.
-  let calendarSource;
-  try {
-    const live = await fetchCalendar(USER);
-    for (const [date, n] of live) days.set(date, n);
-    calendarSource = `public-profile ${live.size} days`;
-    console.log(`  ✓ calendar: ${live.size} days from the public profile`);
-  } catch (e) {
-    calendarSource = `graphql-fallback: ${e.message}`;
-    console.warn(`  ! calendar: falling back to GraphQL (${e.message})`);
-  }
-
-  return { user, days, totals, calendarSource };
+  return { user, days, totals };
 }
 
 function mockData() {
@@ -455,7 +388,6 @@ function calendarCard(d) {
   const yearTotal = [...d.days.entries()].filter(([k]) => k >= start.toISOString().slice(0, 10)).reduce((s, [, n]) => s + n, 0);
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="Contribution calendar">
-<!-- calendar-source: ${d.calendarSource ?? "mock"} -->
 ${defs(id)}
   <style>${baseCss}
   .wk { opacity: 0; animation: fade .5s ease-out forwards; }
