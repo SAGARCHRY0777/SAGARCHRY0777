@@ -112,8 +112,16 @@ async function gql(query, variables) {
  * reports exactly what the profile shows.
  */
 async function fetchCalendar(user) {
+  // A plain fetch from an Actions runner can be served a different page than a
+  // browser gets, so send the headers a browser would.
   const res = await fetch(`https://github.com/users/${user}/contributions`, {
-    headers: { "User-Agent": `${user}-profile-stats`, Accept: "text/html" },
+    headers: {
+      "User-Agent":
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36",
+      Accept: "text/html,application/xhtml+xml",
+      "Accept-Language": "en-GB,en;q=0.9",
+      "X-Requested-With": "XMLHttpRequest",
+    },
   });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   const html = await res.text();
@@ -136,8 +144,11 @@ async function fetchCalendar(user) {
   }
 
   // A markup change upstream would otherwise yield a silently empty calendar,
-  // so treat a short result as failure and let the caller fall back.
-  if (days.size < 300) throw new Error(`parsed only ${days.size} days`);
+  // so treat a short result as failure and let the caller fall back. The counts
+  // are reported too, to tell "markup moved" apart from "page came back empty".
+  if (days.size < 300) {
+    throw new Error(`parsed ${days.size} days / ${counts.size} tooltips from ${html.length}B`);
+  }
   return days;
 }
 
@@ -174,15 +185,21 @@ async function fetchAll() {
   }
   // Override the last year with the public profile calendar, the authoritative
   // per-day source. Earlier years still come from the GraphQL walk above.
+  // The outcome is recorded in the card itself: workflow logs are not readable
+  // without a token, so without this a silent fallback looks identical to
+  // success in the published SVG.
+  let calendarSource;
   try {
     const live = await fetchCalendar(USER);
     for (const [date, n] of live) days.set(date, n);
+    calendarSource = `public-profile ${live.size} days`;
     console.log(`  ✓ calendar: ${live.size} days from the public profile`);
   } catch (e) {
+    calendarSource = `graphql-fallback: ${e.message}`;
     console.warn(`  ! calendar: falling back to GraphQL (${e.message})`);
   }
 
-  return { user, days, totals };
+  return { user, days, totals, calendarSource };
 }
 
 function mockData() {
@@ -434,6 +451,7 @@ function calendarCard(d) {
   const yearTotal = [...d.days.entries()].filter(([k]) => k >= start.toISOString().slice(0, 10)).reduce((s, [, n]) => s + n, 0);
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="Contribution calendar">
+<!-- calendar-source: ${d.calendarSource ?? "mock"} -->
 ${defs(id)}
   <style>${baseCss}
   .wk { opacity: 0; animation: fade .5s ease-out forwards; }
