@@ -12,7 +12,7 @@
 
 <br/>
 
-<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=600&size=22&duration=2800&pause=900&color=22D3EE&center=true&vCenter=true&width=760&height=44&lines=Machine+Learning+Engineer;Computer+Vision+%2B+3D+Perception;LiDAR+%C2%B7+Camera+Fusion+%C2%B7+Gaze+Estimation;MLOps+%E2%80%94+MLflow+%C2%B7+DVC+%C2%B7+FastAPI;Building+production-grade+ML+systems" alt="Typing animation" />
+<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=600&size=22&duration=2800&pause=900&color=22D3EE&center=true&vCenter=true&width=760&height=44&lines=Machine+Learning+Engineer;Computer+Vision+%2B+3D+Perception;LiDAR+%C2%B7+Camera+Fusion+%C2%B7+Gaze+Estimation;MLOps+%E2%80%94+Docker+%C2%B7+Kubernetes+%C2%B7+FastAPI;Building+production-grade+ML+systems" alt="Typing animation" />
 
 <br/>
 
@@ -41,7 +41,7 @@ My work lives where **computer vision, 3D perception and production MLOps** meet
 - 🔭 **Building** — `inferno`: distributed ML inference (FastAPI · Redis · dynamic batching)
 - 🛰️ **Perception** — LiDAR + camera fusion, 3D object detection (SFA3D, FPN‑ResNet‑YOLO), dense depth on KITTI
 - 👁️ **Gaze & attention** — gaze‑target estimation, ETH‑XGaze, CalibNet‑style camera/LiDAR calibration
-- ⚙️ **MLOps** — reproducible pipelines with MLflow + DVC, CI/CD with GitHub Actions
+- ⚙️ **MLOps** — Docker + Kubernetes (KEDA autoscaling), CI/CD with GitHub Actions, Prometheus + OpenTelemetry, eval regression gates in CI
 - 🧩 **Exploring** — RAG systems & LLM tooling (`rag-visualizer`)
 - 🌱 **Learning** — Statistics for ML, TensorFlow internals & neural‑network theory, deeper math
 - 👯 **Open to collaborate on** — ML projects and AI applications, research or production
@@ -65,7 +65,7 @@ My work lives where **computer vision, 3D perception and production MLOps** meet
 <table align="center" border="0">
 <tr>
 <td align="right"><b>Languages</b></td>
-<td><img src="https://skillicons.dev/icons?i=python,cpp,js,ts,bash,html,css&theme=dark" alt="Python, C++, JavaScript, TypeScript, Bash, HTML5, CSS3" /></td>
+<td><img src="https://skillicons.dev/icons?i=python,js,ts,bash,html,css&theme=dark" alt="Python, JavaScript, TypeScript, Bash, HTML5, CSS3" /></td>
 </tr>
 <tr>
 <td align="right"><b>ML · DL · CV</b></td>
@@ -77,7 +77,6 @@ My work lives where **computer vision, 3D perception and production MLOps** meet
 <img src="https://img.shields.io/badge/Matplotlib-11557C?style=flat-square&logo=python&logoColor=white" alt="Matplotlib" />
 <img src="https://img.shields.io/badge/Hugging_Face-FFD21E?style=flat-square&logo=huggingface&logoColor=black" alt="Hugging Face" />
 <img src="https://img.shields.io/badge/ONNX-005CED?style=flat-square&logo=onnx&logoColor=white" alt="ONNX" />
-<img src="https://img.shields.io/badge/TensorRT-76B900?style=flat-square&logo=nvidia&logoColor=white" alt="TensorRT" />
 <img src="https://img.shields.io/badge/YOLO-111111?style=flat-square&logo=yolo&logoColor=00FFFF" alt="YOLO" />
 <img src="https://img.shields.io/badge/Open3D-0b1020?style=flat-square&logoColor=white" alt="Open3D" />
 <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white" alt="LangChain" />
@@ -87,15 +86,12 @@ My work lives where **computer vision, 3D perception and production MLOps** meet
 <td align="right"><b>Backend · MLOps</b></td>
 <td>
 <img src="https://skillicons.dev/icons?i=fastapi,django,flask,docker,kubernetes,githubactions,git&theme=dark" alt="FastAPI, Django, Flask, Docker, Kubernetes, GitHub Actions, Git" /><br/>
-<img src="https://img.shields.io/badge/MLflow-0194E2?style=flat-square&logo=mlflow&logoColor=white" alt="MLflow" />
-<img src="https://img.shields.io/badge/DVC-945DD6?style=flat-square&logo=dvc&logoColor=white" alt="DVC" />
-<img src="https://img.shields.io/badge/Weights_&_Biases-FFBE00?style=flat-square&logo=weightsandbiases&logoColor=black" alt="Weights & Biases" />
 <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white" alt="Streamlit" />
 </td>
 </tr>
 <tr>
 <td align="right"><b>Data · Cloud · OS</b></td>
-<td><img src="https://skillicons.dev/icons?i=postgres,mysql,redis,mongodb,aws,gcp,linux&theme=dark" alt="PostgreSQL, MySQL, Redis, MongoDB, AWS, GCP, Linux" /></td>
+<td><img src="https://skillicons.dev/icons?i=postgres,mysql,redis,mongodb,aws,linux&theme=dark" alt="PostgreSQL, MySQL, Redis, MongoDB, AWS, Linux" /></td>
 </tr>
 <tr>
 <td align="right"><b>Tools</b></td>
