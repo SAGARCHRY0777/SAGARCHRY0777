@@ -7,12 +7,12 @@
 <div align="center">
 
 <a href="https://github.com/SAGARCHRY0777">
-  <img src="https://raw.githubusercontent.com/SAGARCHRY0777/SAGARCHRY0777/main/assets/hero.svg" width="100%" alt="Sagar Chaudhary — Machine Learning Engineer" />
+  <img src="https://raw.githubusercontent.com/SAGARCHRY0777/SAGARCHRY0777/main/assets/hero.svg" width="100%" alt="Sagar Chaudhary — AI Engineer, industrial and manufacturing AI" />
 </a>
 
 <br/>
 
-<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=600&size=22&duration=2800&pause=900&color=22D3EE&center=true&vCenter=true&width=760&height=44&lines=Machine+Learning+Engineer;Computer+Vision+%2B+3D+Perception;LiDAR+%C2%B7+Camera+Fusion+%C2%B7+Gaze+Estimation;MLOps+%E2%80%94+Docker+%C2%B7+Kubernetes+%C2%B7+FastAPI;Building+production-grade+ML+systems" alt="Typing animation" />
+<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=600&size=22&duration=2800&pause=900&color=22D3EE&center=true&vCenter=true&width=760&height=44&lines=AI+Engineer;Industrial+%26+Manufacturing+AI;GenAI+%C2%B7+RAG+%C2%B7+Agentic+Systems;MLOps+%E2%80%94+Docker+%C2%B7+Kubernetes+%C2%B7+CI%2FCD;Building+production+AI+systems" alt="Typing animation" />
 
 <br/>
 
@@ -35,18 +35,17 @@
 <tr>
 <td width="62%" valign="top">
 
-**Machine Learning Engineer** from Bangalore 🇮🇳 who turns raw sensor data into decisions.
-My work lives where **computer vision, 3D perception and production MLOps** meet.
+**AI Engineer** from Bengaluru 🇮🇳 who turns raw sensor data into decisions.
+My work lives where **industrial IT‑OT pipelines, generative AI and production MLOps** meet.
 
-- 🔭 **Building** — `inferno`: distributed ML inference (FastAPI · Redis · dynamic batching)
-- 🛰️ **Perception** — LiDAR + camera fusion, 3D object detection (SFA3D, FPN‑ResNet‑YOLO), dense depth on KITTI
-- 👁️ **Gaze & attention** — gaze‑target estimation, ETH‑XGaze, CalibNet‑style camera/LiDAR calibration
+- 🏭 **Industrial AI** — end‑to‑end IT‑OT pipelines ingesting high‑frequency engine/plant sensor data over raw TCP/IP, streamed to live dashboards over WebSockets
+- 🧠 **GenAI in production** — RAG over technical test reports (LangChain · ChromaDB · rerankers) and agentic natural‑language‑to‑SQL workflows with LangGraph and MCP
+- 🔭 **Building** — `inferno`: distributed ML inference (FastAPI · Redis Streams · dynamic batching · KEDA autoscaling)
+- 📈 **Deep learning** — LSTM time‑series for anomaly detection and predictive maintenance; LiDAR + camera fusion and 3D object detection on KITTI
 - ⚙️ **MLOps** — Docker + Kubernetes (KEDA autoscaling), CI/CD with GitHub Actions, Prometheus + OpenTelemetry, eval regression gates in CI
-- 🧩 **Exploring** — RAG systems & LLM tooling (`rag-visualizer`)
-- 🌱 **Learning** — Statistics for ML, TensorFlow internals & neural‑network theory, deeper math
-- 👯 **Open to collaborate on** — ML projects and AI applications, research or production
-- 🤝 **Looking for** — guidance on optimizing ML models and real‑world AI implementations
-- 💬 **Ask me about** — PyTorch, sensor calibration, shipping models that don't fall over in prod
+- 🌱 **Learning** — distributed systems depth, model‑serving internals, and the maths under all of it
+- 👯 **Open to collaborate on** — production AI systems, industrial/IIoT and GenAI platforms
+- 💬 **Ask me about** — RAG pipelines, sensor calibration, and shipping models that don't fall over in prod
 - ⚡ **Fun fact** — *Change is the only constant.*
 
 </td>
@@ -115,28 +114,10 @@ Production‑grade **distributed ML inference** — FastAPI gateway, Redis‑bac
 </td>
 <td width="50%" valign="top">
 
-### 🛰️ [lidar-image_object-detection](https://github.com/SAGARCHRY0777/lidar-image_object-detection)
-**FPN‑ResNet + YOLO fusion** for object detection across LiDAR point clouds and camera frames.
+### 🧪 [system-design-lab](https://github.com/SAGARCHRY0777/system-design-lab)
+A **depth reference for distributed systems** — 123 pages across 21 sections, 325 diagrams, runnable implementations, and CI that validates every link, scene and generated file.
 
-<img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" alt="PyTorch" /> <img src="https://img.shields.io/badge/YOLO-111111?style=flat-square&logo=yolo&logoColor=00FFFF" alt="YOLO" /> <img src="https://img.shields.io/badge/LiDAR-0b1020?style=flat-square&logoColor=white" alt="LiDAR" /> <img src="https://img.shields.io/badge/KITTI-0b1020?style=flat-square" alt="KITTI" />
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-### 🌊 [DFU — Depth Fusion](https://github.com/SAGARCHRY0777/DFU)
-Dense **depth‑map completion** from sparse LiDAR + RGB on KITTI — sparse points in, metric depth out.
-
-<img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" alt="PyTorch" /> <img src="https://img.shields.io/badge/Depth_Completion-0b1020?style=flat-square" alt="Depth completion" /> <img src="https://img.shields.io/badge/KITTI-0b1020?style=flat-square" alt="KITTI" />
-
-</td>
-<td width="50%" valign="top">
-
-### 🎯 [CalibNet (PyTorch)](https://github.com/SAGARCHRY0777/CalibNet_pytorch_mine)
-Learned **camera ↔ LiDAR extrinsic calibration** — a network that regresses the rigid transform instead of hand‑tuning it.
-
-<img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" alt="PyTorch" /> <img src="https://img.shields.io/badge/Calibration-0b1020?style=flat-square" alt="Calibration" /> <img src="https://img.shields.io/badge/Open3D-0b1020?style=flat-square" alt="Open3D" />
+<img src="https://img.shields.io/badge/System_Design-0b1020?style=flat-square" alt="System design" /> <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" /> <img src="https://img.shields.io/badge/Mermaid-FF3670?style=flat-square&logo=mermaid&logoColor=white" alt="Mermaid" /> <img src="https://img.shields.io/badge/CI_validated-22d3ee?style=flat-square&logo=githubactions&logoColor=0b1020" alt="CI validated" />
 
 </td>
 </tr>
@@ -144,17 +125,35 @@ Learned **camera ↔ LiDAR extrinsic calibration** — a network that regresses 
 <td width="50%" valign="top">
 
 ### 🧩 [rag-visualizer](https://github.com/SAGARCHRY0777/rag-visualizer)
-Interactive **RAG pipeline visualizer** — see chunks, embeddings and retrieval hits before you trust the answer.
+Interactive **RAG internals playground** — chunking, BM25, ColBERT MaxSim, cross‑encoder reranking and RRF fusion, all computed live in the browser on your own text. No backend.
 
-<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" /> <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white" alt="LangChain" /> <img src="https://img.shields.io/badge/RAG-0b1020?style=flat-square" alt="RAG" />
+<img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=0b1020" alt="React" /> <img src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white" alt="Vite" /> <img src="https://img.shields.io/badge/RAG-0b1020?style=flat-square" alt="RAG" /> <img src="https://img.shields.io/badge/BM25_·_ColBERT-0b1020?style=flat-square" alt="BM25 and ColBERT" />
 
 </td>
 <td width="50%" valign="top">
 
-### 🧬 [Cancer Classification · MLflow + DVC](https://github.com/SAGARCHRY0777/Cancer_Classification_Mlflow_DVC)
-End‑to‑end **MLOps pipeline** — versioned data, tracked experiments, reproducible training runs.
+### 📐 [system-design-handbook](https://github.com/SAGARCHRY0777/system-design-handbook)
+The **45‑minute interview round** — a repeatable framework, the building blocks, and 8 worked designs with the trade‑offs stated out loud.
 
-<img src="https://img.shields.io/badge/MLflow-0194E2?style=flat-square&logo=mlflow&logoColor=white" alt="MLflow" /> <img src="https://img.shields.io/badge/DVC-945DD6?style=flat-square&logo=dvc&logoColor=white" alt="DVC" /> <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white" alt="TensorFlow" />
+<img src="https://img.shields.io/badge/System_Design-0b1020?style=flat-square" alt="System design" /> <img src="https://img.shields.io/badge/29_pages-0b1020?style=flat-square" alt="29 pages" /> <img src="https://img.shields.io/badge/GitHub_Pages-222222?style=flat-square&logo=githubpages&logoColor=white" alt="GitHub Pages" />
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 🛰️ [lidar-image_object-detection](https://github.com/SAGARCHRY0777/lidar-image_object-detection)
+**FPN‑ResNet + YOLO fusion** for 3D object detection across LiDAR point clouds and camera frames on KITTI.
+
+<img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" alt="PyTorch" /> <img src="https://img.shields.io/badge/YOLO-111111?style=flat-square&logo=yolo&logoColor=00FFFF" alt="YOLO" /> <img src="https://img.shields.io/badge/LiDAR-0b1020?style=flat-square&logoColor=white" alt="LiDAR" /> <img src="https://img.shields.io/badge/KITTI-0b1020?style=flat-square" alt="KITTI" />
+
+</td>
+<td width="50%" valign="top">
+
+### 🤖 [llm-handbook](https://github.com/SAGARCHRY0777/llm-handbook)
+Building, testing and operating **LLM systems** — RAG, evaluation, serving, agents — each topic at three depths and from seven seats.
+
+<img src="https://img.shields.io/badge/LLM-0b1020?style=flat-square" alt="LLM" /> <img src="https://img.shields.io/badge/RAG-0b1020?style=flat-square" alt="RAG" /> <img src="https://img.shields.io/badge/Evaluation-0b1020?style=flat-square" alt="Evaluation" /> <img src="https://img.shields.io/badge/Agents-0b1020?style=flat-square" alt="Agents" />
 
 </td>
 </tr>
@@ -162,7 +161,7 @@ End‑to‑end **MLOps pipeline** — versioned data, tracked experiments, repro
 
 <div align="center">
   <a href="https://github.com/SAGARCHRY0777?tab=repositories&sort=updated">
-    <img src="https://img.shields.io/badge/→_explore_all_46_repositories-0b1020?style=for-the-badge&logo=github&logoColor=22d3ee" alt="All repositories" />
+    <img src="https://img.shields.io/badge/→_explore_all_repositories-0b1020?style=for-the-badge&logo=github&logoColor=22d3ee" alt="All repositories" />
   </a>
 </div>
 
@@ -196,7 +195,7 @@ End‑to‑end **MLOps pipeline** — versioned data, tracked experiments, repro
 
 <img src="https://raw.githubusercontent.com/SAGARCHRY0777/SAGARCHRY0777/main/assets/divider.svg" width="100%" alt="" />
 
-## 🧭 2026 Roadmap
+## 🧭 Roadmap
 
 <table align="center" border="0">
 <tr>
@@ -239,7 +238,8 @@ End‑to‑end **MLOps pipeline** — versioned data, tracked experiments, repro
 
 <br/><br/>
 
-<a href="https://www.linkedin.com/in/sagar-chaudhary-4a7814223"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+<a href="https://sagarchry0777.github.io"><img src="https://img.shields.io/badge/Portfolio-22d3ee?style=for-the-badge&logo=firefoxbrowser&logoColor=0b1020" alt="Portfolio" /></a>
+<a href="https://www.linkedin.com/in/sagar-chaudhary777/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
 <a href="https://www.kaggle.com/sagarchaudhary777"><img src="https://img.shields.io/badge/Kaggle-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white" alt="Kaggle" /></a>
 <a href="https://leetcode.com/u/sagar_chaudhary_07/"><img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" alt="LeetCode" /></a>
 <a href="https://medium.com/@sagar16ch07"><img src="https://img.shields.io/badge/Medium-000000?style=for-the-badge&logo=medium&logoColor=white" alt="Medium" /></a>

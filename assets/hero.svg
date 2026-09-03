@@ -107,7 +107,7 @@
       <path d="M30 350 V390 H70"/>
       <path d="M1170 350 V390 H1130"/>
     </g>
-    <text class="tag in d1" x="44" y="404">[ ML // CV // 3D PERCEPTION ]</text>
+    <text class="tag in d1" x="44" y="404">[ AI // INDUSTRIAL // GENAI ]</text>
     <text class="tag in d1" x="1156" y="404" text-anchor="end">BANGALORE, IN</text>
     <text class="tag in d1" x="46" y="46" dominant-baseline="hanging">SYS.ONLINE</text>
     <circle class="pulse" cx="152" cy="53" r="3.5" fill="#34d399"/>
@@ -118,18 +118,18 @@
     <!-- headline -->
     <text class="tag in d2" x="600" y="118" text-anchor="middle" style="fill:#7dd3fc">&gt;&gt; hello, world — i am</text>
     <text class="title in d3" x="600" y="190" text-anchor="middle" fill="url(#txt)" filter="url(#glow)">SAGAR CHAUDHARY</text>
-    <text class="sub in d4" x="600" y="232" text-anchor="middle">machine learning · computer vision · 3d perception · mlops<tspan class="cursor" fill="#22d3ee">_</tspan></text>
+    <text class="sub in d4" x="600" y="232" text-anchor="middle">industrial ai · genai &amp; rag · distributed systems · mlops<tspan class="cursor" fill="#22d3ee">_</tspan></text>
 
     <!-- chips -->
     <g class="in d5">
       <rect x="292" y="268" width="130" height="34" rx="17" fill="#0f172a" stroke="#22d3ee" stroke-opacity=".6"/>
       <text class="chip" x="357" y="290" text-anchor="middle">PYTORCH</text>
       <rect x="434" y="268" width="176" height="34" rx="17" fill="#0f172a" stroke="#818cf8" stroke-opacity=".6"/>
-      <text class="chip" x="522" y="290" text-anchor="middle">LIDAR · 3D DETECTION</text>
+      <text class="chip" x="522" y="290" text-anchor="middle">RAG · AGENTIC AI</text>
       <rect x="622" y="268" width="140" height="34" rx="17" fill="#0f172a" stroke="#a78bfa" stroke-opacity=".6"/>
-      <text class="chip" x="692" y="290" text-anchor="middle">MLFLOW · DVC</text>
+      <text class="chip" x="692" y="290" text-anchor="middle">FASTAPI · K8S</text>
       <rect x="774" y="268" width="134" height="34" rx="17" fill="#0f172a" stroke="#f472b6" stroke-opacity=".6"/>
-      <text class="chip" x="841" y="290" text-anchor="middle">FASTAPI · RAG</text>
+      <text class="chip" x="841" y="290" text-anchor="middle">IT-OT · IIOT</text>
     </g>
 
     <!-- bottom line with sweep -->
