@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="260" viewBox="0 0 420 260" role="img" aria-label="Most used languages">
+
+  <defs>
+    <linearGradient id="l-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#05070f"/><stop offset="60%" stop-color="#0b1020"/><stop offset="100%" stop-color="#140b2e"/>
+    </linearGradient>
+    <linearGradient id="l-accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22d3ee"/><stop offset="50%" stop-color="#818cf8"/><stop offset="100%" stop-color="#f472b6"/>
+    </linearGradient>
+    <pattern id="l-grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#38bdf8" stroke-opacity="0.07" stroke-width="1"/>
+    </pattern>
+    <filter id="l-glow" x="-30%" y="-60%" width="160%" height="220%">
+      <feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <style>
+  .h  { font: 700 15px "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif; fill: #e2e8f0; letter-spacing: 1px; }
+  .lbl{ font: 500 11px "JetBrains Mono","Fira Code",Consolas,"Courier New",monospace; fill: #64748b; letter-spacing: 2px; }
+  .num{ font: 800 34px "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif; fill: #e2e8f0; }
+  .sm { font: 500 12px "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif; fill: #9fb3c8; }
+  .in { animation: rise .8s cubic-bezier(.2,.8,.2,1) both; }
+  @keyframes rise { from { opacity:0; transform: translateY(12px) } to { opacity:1; transform: translateY(0) } }
+  .pulse { animation: pulse 3s ease-in-out infinite; }
+  @keyframes pulse { 0%,100% { opacity:.45 } 50% { opacity:1 } }</style>
+  
+  <rect width="420" height="260" rx="20" fill="url(#l-bg)"/>
+  <rect width="420" height="260" rx="20" fill="url(#l-grid)"/>
+  <rect x="1" y="1" width="418" height="258" rx="19" fill="none" stroke="#1e293b" stroke-width="2"/>
+  <rect x="24" y="26" width="4" height="16" rx="2" fill="url(#l-accent)"/>
+  <text class="h" x="40" y="40">LANGUAGE DISTRIBUTION</text>
+  <circle class="pulse" cx="390" cy="34" r="4" fill="#34d399"/>
+  <text class="lbl" x="376" y="38" text-anchor="end">LIVE</text>
+  <clipPath id="l-clip"><rect x="26" y="70" width="368" height="16" rx="8"/></clipPath>
+  <g clip-path="url(#l-clip)">
+    <rect x="26" y="70" width="368" height="16" fill="#0f172a"/>
+    <rect x="26.0" y="70" width="323.6" height="16" fill="#DA5B0B">
+        <animate attributeName="width" from="0" to="323.6" dur=".9s" begin="0.00s" fill="freeze"/>
+      </rect><rect x="349.6" y="70" width="29.2" height="16" fill="#3572A5">
+        <animate attributeName="width" from="0" to="29.2" dur=".9s" begin="0.09s" fill="freeze"/>
+      </rect><rect x="378.7" y="70" width="7.5" height="16" fill="#f1e05a">
+        <animate attributeName="width" from="0" to="7.5" dur=".9s" begin="0.18s" fill="freeze"/>
+      </rect><rect x="386.2" y="70" width="4.3" height="16" fill="#3178c6">
+        <animate attributeName="width" from="0" to="4.3" dur=".9s" begin="0.27s" fill="freeze"/>
+      </rect><rect x="390.6" y="70" width="2.2" height="16" fill="#663399">
+        <animate attributeName="width" from="0" to="2.2" dur=".9s" begin="0.36s" fill="freeze"/>
+      </rect><rect x="392.8" y="70" width="2.0" height="16" fill="#e34c26">
+        <animate attributeName="width" from="0" to="2.0" dur=".9s" begin="0.45s" fill="freeze"/>
+      </rect><rect x="394.8" y="70" width="2.0" height="16" fill="#64748b">
+        <animate attributeName="width" from="0" to="2.0" dur=".9s" begin="0.54s" fill="freeze"/>
+      </rect>
+  </g>
+  
+    <g class="in" style="animation-delay:0.3s">
+      <rect x="26" y="118" width="10" height="10" rx="3" fill="#DA5B0B"/>
+      <text class="sm" x="44" y="127">Jupyter Notebook</text>
+      <text class="lbl" x="202" y="127" text-anchor="end">87.9%</text>
+    </g>
+    <g class="in" style="animation-delay:0.37s">
+      <rect x="222" y="118" width="10" height="10" rx="3" fill="#3572A5"/>
+      <text class="sm" x="240" y="127">Python</text>
+      <text class="lbl" x="398" y="127" text-anchor="end">7.9%</text>
+    </g>
+    <g class="in" style="animation-delay:0.44s">
+      <rect x="26" y="152" width="10" height="10" rx="3" fill="#f1e05a"/>
+      <text class="sm" x="44" y="161">JavaScript</text>
+      <text class="lbl" x="202" y="161" text-anchor="end">2.0%</text>
+    </g>
+    <g class="in" style="animation-delay:0.51s">
+      <rect x="222" y="152" width="10" height="10" rx="3" fill="#3178c6"/>
+      <text class="sm" x="240" y="161">TypeScript</text>
+      <text class="lbl" x="398" y="161" text-anchor="end">1.2%</text>
+    </g>
+    <g class="in" style="animation-delay:0.5800000000000001s">
+      <rect x="26" y="186" width="10" height="10" rx="3" fill="#663399"/>
+      <text class="sm" x="44" y="195">CSS</text>
+      <text class="lbl" x="202" y="195" text-anchor="end">0.6%</text>
+    </g>
+    <g class="in" style="animation-delay:0.65s">
+      <rect x="222" y="186" width="10" height="10" rx="3" fill="#e34c26"/>
+      <text class="sm" x="240" y="195">HTML</text>
+      <text class="lbl" x="398" y="195" text-anchor="end">0.2%</text>
+    </g>
+    <g class="in" style="animation-delay:0.72s">
+      <rect x="26" y="220" width="10" height="10" rx="3" fill="#64748b"/>
+      <text class="sm" x="44" y="229">Other</text>
+      <text class="lbl" x="202" y="229" text-anchor="end">0.1%</text>
+    </g>
+</svg>

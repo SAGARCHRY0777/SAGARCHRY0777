@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="260" viewBox="0 0 420 260" role="img" aria-label="Contributions by day of week">
+
+  <defs>
+    <linearGradient id="r-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#05070f"/><stop offset="60%" stop-color="#0b1020"/><stop offset="100%" stop-color="#140b2e"/>
+    </linearGradient>
+    <linearGradient id="r-accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22d3ee"/><stop offset="50%" stop-color="#818cf8"/><stop offset="100%" stop-color="#f472b6"/>
+    </linearGradient>
+    <pattern id="r-grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#38bdf8" stroke-opacity="0.07" stroke-width="1"/>
+    </pattern>
+    <filter id="r-glow" x="-30%" y="-60%" width="160%" height="220%">
+      <feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <style>
+  .h  { font: 700 15px "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif; fill: #e2e8f0; letter-spacing: 1px; }
+  .lbl{ font: 500 11px "JetBrains Mono","Fira Code",Consolas,"Courier New",monospace; fill: #64748b; letter-spacing: 2px; }
+  .num{ font: 800 34px "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif; fill: #e2e8f0; }
+  .sm { font: 500 12px "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif; fill: #9fb3c8; }
+  .in { animation: rise .8s cubic-bezier(.2,.8,.2,1) both; }
+  @keyframes rise { from { opacity:0; transform: translateY(12px) } to { opacity:1; transform: translateY(0) } }
+  .pulse { animation: pulse 3s ease-in-out infinite; }
+  @keyframes pulse { 0%,100% { opacity:.45 } 50% { opacity:1 } }</style>
+  
+  <rect width="420" height="260" rx="20" fill="url(#r-bg)"/>
+  <rect width="420" height="260" rx="20" fill="url(#r-grid)"/>
+  <rect x="1" y="1" width="418" height="258" rx="19" fill="none" stroke="#1e293b" stroke-width="2"/>
+  <rect x="24" y="26" width="4" height="16" rx="2" fill="url(#r-accent)"/>
+  <text class="h" x="40" y="40">WEEKLY RHYTHM</text>
+  <circle class="pulse" cx="390" cy="34" r="4" fill="#34d399"/>
+  <text class="lbl" x="376" y="38" text-anchor="end">LIVE</text>
+  <text class="sm" x="26" y="64">Busiest day: <tspan style="fill:#f472b6;font-weight:700">SUN</tspan> — 23% of all contributions</text>
+  
+    <g>
+      <rect x="39" y="92.0" width="30" height="104" rx="7" fill="#0f172a" fill-opacity=".6"/>
+      <rect x="39" y="92.0" width="30" height="104.0" rx="7" fill="#f472b6" opacity=".9">
+        <animate attributeName="height" from="0" to="104.0" dur=".8s" begin="0.00s" fill="freeze"/>
+        <animate attributeName="y" from="196" to="92.0" dur=".8s" begin="0.00s" fill="freeze"/>
+      </rect>
+      <text class="lbl" x="54" y="214" text-anchor="middle" style="fill:#f472b6">SUN</text>
+      <text class="lbl" x="54" y="84.0" text-anchor="middle" style="font-size:10px;fill:#9fb3c8">65</text>
+    </g>
+    <g>
+      <rect x="91" y="92.0" width="30" height="104" rx="7" fill="#0f172a" fill-opacity=".6"/>
+      <rect x="91" y="132.0" width="30" height="64.0" rx="7" fill="#22d3ee" opacity=".9">
+        <animate attributeName="height" from="0" to="64.0" dur=".8s" begin="0.07s" fill="freeze"/>
+        <animate attributeName="y" from="196" to="132.0" dur=".8s" begin="0.07s" fill="freeze"/>
+      </rect>
+      <text class="lbl" x="106" y="214" text-anchor="middle">MON</text>
+      <text class="lbl" x="106" y="124.0" text-anchor="middle" style="font-size:10px;fill:#9fb3c8">40</text>
+    </g>
+    <g>
+      <rect x="143" y="92.0" width="30" height="104" rx="7" fill="#0f172a" fill-opacity=".6"/>
+      <rect x="143" y="140.0" width="30" height="56.0" rx="7" fill="#22d3ee" opacity=".9">
+        <animate attributeName="height" from="0" to="56.0" dur=".8s" begin="0.14s" fill="freeze"/>
+        <animate attributeName="y" from="196" to="140.0" dur=".8s" begin="0.14s" fill="freeze"/>
+      </rect>
+      <text class="lbl" x="158" y="214" text-anchor="middle">TUE</text>
+      <text class="lbl" x="158" y="132.0" text-anchor="middle" style="font-size:10px;fill:#9fb3c8">35</text>
+    </g>
+    <g>
+      <rect x="195" y="92.0" width="30" height="104" rx="7" fill="#0f172a" fill-opacity=".6"/>
+      <rect x="195" y="108.0" width="30" height="88.0" rx="7" fill="#22d3ee" opacity=".9">
+        <animate attributeName="height" from="0" to="88.0" dur=".8s" begin="0.21s" fill="freeze"/>
+        <animate attributeName="y" from="196" to="108.0" dur=".8s" begin="0.21s" fill="freeze"/>
+      </rect>
+      <text class="lbl" x="210" y="214" text-anchor="middle">WED</text>
+      <text class="lbl" x="210" y="100.0" text-anchor="middle" style="font-size:10px;fill:#9fb3c8">55</text>
+    </g>
+    <g>
+      <rect x="247" y="92.0" width="30" height="104" rx="7" fill="#0f172a" fill-opacity=".6"/>
+      <rect x="247" y="160.8" width="30" height="35.2" rx="7" fill="#22d3ee" opacity=".9">
+        <animate attributeName="height" from="0" to="35.2" dur=".8s" begin="0.28s" fill="freeze"/>
+        <animate attributeName="y" from="196" to="160.8" dur=".8s" begin="0.28s" fill="freeze"/>
+      </rect>
+      <text class="lbl" x="262" y="214" text-anchor="middle">THU</text>
+      <text class="lbl" x="262" y="152.8" text-anchor="middle" style="font-size:10px;fill:#9fb3c8">22</text>
+    </g>
+    <g>
+      <rect x="299" y="92.0" width="30" height="104" rx="7" fill="#0f172a" fill-opacity=".6"/>
+      <rect x="299" y="164.0" width="30" height="32.0" rx="7" fill="#22d3ee" opacity=".9">
+        <animate attributeName="height" from="0" to="32.0" dur=".8s" begin="0.35s" fill="freeze"/>
+        <animate attributeName="y" from="196" to="164.0" dur=".8s" begin="0.35s" fill="freeze"/>
+      </rect>
+      <text class="lbl" x="314" y="214" text-anchor="middle">FRI</text>
+      <text class="lbl" x="314" y="156.0" text-anchor="middle" style="font-size:10px;fill:#9fb3c8">20</text>
+    </g>
+    <g>
+      <rect x="351" y="92.0" width="30" height="104" rx="7" fill="#0f172a" fill-opacity=".6"/>
+      <rect x="351" y="128.8" width="30" height="67.2" rx="7" fill="#a78bfa" opacity=".9">
+        <animate attributeName="height" from="0" to="67.2" dur=".8s" begin="0.42s" fill="freeze"/>
+        <animate attributeName="y" from="196" to="128.8" dur=".8s" begin="0.42s" fill="freeze"/>
+      </rect>
+      <text class="lbl" x="366" y="214" text-anchor="middle">SAT</text>
+      <text class="lbl" x="366" y="120.8" text-anchor="middle" style="font-size:10px;fill:#9fb3c8">42</text>
+    </g>
+</svg>

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="260" viewBox="0 0 860 260" role="img" aria-label="GitHub statistics for SAGARCHRY0777">
+
+  <defs>
+    <linearGradient id="s-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#05070f"/><stop offset="60%" stop-color="#0b1020"/><stop offset="100%" stop-color="#140b2e"/>
+    </linearGradient>
+    <linearGradient id="s-accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22d3ee"/><stop offset="50%" stop-color="#818cf8"/><stop offset="100%" stop-color="#f472b6"/>
+    </linearGradient>
+    <pattern id="s-grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#38bdf8" stroke-opacity="0.07" stroke-width="1"/>
+    </pattern>
+    <filter id="s-glow" x="-30%" y="-60%" width="160%" height="220%">
+      <feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <style>
+  .h  { font: 700 15px "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif; fill: #e2e8f0; letter-spacing: 1px; }
+  .lbl{ font: 500 11px "JetBrains Mono","Fira Code",Consolas,"Courier New",monospace; fill: #64748b; letter-spacing: 2px; }
+  .num{ font: 800 34px "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif; fill: #e2e8f0; }
+  .sm { font: 500 12px "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif; fill: #9fb3c8; }
+  .in { animation: rise .8s cubic-bezier(.2,.8,.2,1) both; }
+  @keyframes rise { from { opacity:0; transform: translateY(12px) } to { opacity:1; transform: translateY(0) } }
+  .pulse { animation: pulse 3s ease-in-out infinite; }
+  @keyframes pulse { 0%,100% { opacity:.45 } 50% { opacity:1 } }</style>
+  
+  <rect width="860" height="260" rx="20" fill="url(#s-bg)"/>
+  <rect width="860" height="260" rx="20" fill="url(#s-grid)"/>
+  <rect x="1" y="1" width="858" height="258" rx="19" fill="none" stroke="#1e293b" stroke-width="2"/>
+  <rect x="24" y="26" width="4" height="16" rx="2" fill="url(#s-accent)"/>
+  <text class="h" x="40" y="40">GITHUB · MISSION CONTROL</text>
+  <circle class="pulse" cx="830" cy="34" r="4" fill="#34d399"/>
+  <text class="lbl" x="816" y="38" text-anchor="end">LIVE</text>
+  
+    <g class="in" style="animation-delay:0.1s">
+      <rect x="30" y="74" width="186" height="150" rx="14" fill="#0f172a" fill-opacity=".75" stroke="#22d3ee" stroke-opacity=".35"/>
+      <rect x="30" y="74" width="186" height="3" rx="1.5" fill="#22d3ee"/>
+      <text class="lbl" x="46" y="104" style="fill:#22d3ee">CONTRIBUTIONS</text>
+      <text class="num" x="46" y="152" filter="url(#s-glow)">279</text>
+      <text class="sm" x="46" y="182">since 18 Dec 2023</text>
+    </g>
+    <g class="in" style="animation-delay:0.22s">
+      <rect x="232" y="74" width="186" height="150" rx="14" fill="#0f172a" fill-opacity=".75" stroke="#f472b6" stroke-opacity=".35"/>
+      <rect x="232" y="74" width="186" height="3" rx="1.5" fill="#f472b6"/>
+      <text class="lbl" x="248" y="104" style="fill:#f472b6">CURRENT STREAK</text>
+      <text class="num" x="248" y="152" filter="url(#s-glow)">12</text>
+      <text class="sm" x="248" y="182">days · 25 Aug 2026</text>
+    </g>
+    <g class="in" style="animation-delay:0.33999999999999997s">
+      <rect x="434" y="74" width="186" height="150" rx="14" fill="#0f172a" fill-opacity=".75" stroke="#a78bfa" stroke-opacity=".35"/>
+      <rect x="434" y="74" width="186" height="3" rx="1.5" fill="#a78bfa"/>
+      <text class="lbl" x="450" y="104" style="fill:#a78bfa">LONGEST STREAK</text>
+      <text class="num" x="450" y="152" filter="url(#s-glow)">12</text>
+      <text class="sm" x="450" y="182">25 Aug 2026 →</text>
+    </g>
+    <g class="in" style="animation-delay:0.45999999999999996s">
+      <rect x="636" y="74" width="186" height="150" rx="14" fill="#0f172a" fill-opacity=".75" stroke="#818cf8" stroke-opacity=".35"/>
+      <rect x="636" y="74" width="186" height="3" rx="1.5" fill="#818cf8"/>
+      <text class="lbl" x="652" y="104" style="fill:#818cf8">REPOSITORIES</text>
+      <text class="num" x="652" y="152" filter="url(#s-glow)">44</text>
+      <text class="sm" x="652" y="182">26 original</text>
+    </g>
+  <text class="lbl" x="430" y="244" text-anchor="middle">commits 222  ·  pull requests 0  ·  issues 12  ·  followers 4</text>
+</svg>
