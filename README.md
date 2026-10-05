@@ -100,49 +100,115 @@ My work lives where **industrial IT‑OT pipelines, generative AI and production
 
 <img src="https://raw.githubusercontent.com/SAGARCHRY0777/SAGARCHRY0777/main/assets/divider.svg" width="100%" alt="" />
 
-## 🚀 Featured Projects
+## 🚀 What I'm Building
+
+<div align="center">
+
+<img src="https://img.shields.io/badge/4_handbooks-136_pages-22d3ee?style=for-the-badge&labelColor=0b1020" alt="4 handbooks, 136 pages" />
+<img src="https://img.shields.io/badge/136_simulations-·_26_labs-818cf8?style=for-the-badge&labelColor=0b1020" alt="136 simulations and 26 labs" />
+<img src="https://img.shields.io/badge/3_labs-run_the_real_thing-a78bfa?style=for-the-badge&labelColor=0b1020" alt="3 deep labs" />
+<img src="https://img.shields.io/badge/2_platforms-production_grade-f472b6?style=for-the-badge&labelColor=0b1020" alt="2 production platforms" />
+
+</div>
+
+<br/>
+
+### ⚡ Platforms — things that run in production
 
 <table border="0">
 <tr>
 <td width="50%" valign="top">
 
-### 🔥 [inferno](https://github.com/SAGARCHRY0777/inferno)
-Production‑grade **distributed ML inference** — FastAPI gateway, Redis‑backed queue, dynamic batching and horizontally scaled workers.
+#### 🔥 [inferno](https://github.com/SAGARCHRY0777/inferno)
+Production‑grade **distributed ML inference** — FastAPI gateway, Redis‑backed queue, dynamic batching and horizontally scaled workers with KEDA autoscaling.
 
-<img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI" /> <img src="https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white" alt="Redis" /> <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker" /> <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" alt="PyTorch" />
+<img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI" /> <img src="https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white" alt="Redis" /> <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white" alt="Kubernetes" /> <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker" /> <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" alt="PyTorch" />
 
 </td>
 <td width="50%" valign="top">
 
-### 🧪 [system-design-lab](https://github.com/SAGARCHRY0777/system-design-lab)
-A **depth reference for distributed systems** — 123 pages across 21 sections, 325 diagrams, runnable implementations, and CI that validates every link, scene and generated file.
-
-<img src="https://img.shields.io/badge/System_Design-0b1020?style=flat-square" alt="System design" /> <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" /> <img src="https://img.shields.io/badge/Mermaid-FF3670?style=flat-square&logo=mermaid&logoColor=white" alt="Mermaid" /> <img src="https://img.shields.io/badge/CI_validated-22d3ee?style=flat-square&logo=githubactions&logoColor=0b1020" alt="CI validated" />
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-### 🧩 [rag-visualizer](https://github.com/SAGARCHRY0777/rag-visualizer)
+#### 🧩 [rag-visualizer](https://github.com/SAGARCHRY0777/rag-visualizer)
 Interactive **RAG internals playground** — chunking, BM25, ColBERT MaxSim, cross‑encoder reranking and RRF fusion, all computed live in the browser on your own text. No backend.
 
-<img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=0b1020" alt="React" /> <img src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white" alt="Vite" /> <img src="https://img.shields.io/badge/RAG-0b1020?style=flat-square" alt="RAG" /> <img src="https://img.shields.io/badge/BM25_·_ColBERT-0b1020?style=flat-square" alt="BM25 and ColBERT" />
+[**▸ open it live**](https://sagarchry0777.github.io/rag-visualizer/)
+
+<img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=0b1020" alt="React" /> <img src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white" alt="Vite" /> <img src="https://img.shields.io/badge/BM25_·_ColBERT-0b1020?style=flat-square" alt="BM25 and ColBERT" />
+
+</td>
+</tr>
+</table>
+
+### 🔬 Labs — algorithms built from first principles
+
+<table border="0">
+<tr>
+<td width="50%" valign="top">
+
+#### 🧪 [system-design-lab](https://github.com/SAGARCHRY0777/system-design-lab)
+A **depth reference for distributed systems** — 123 pages across 21 sections, 325 diagrams, runnable implementations, and CI that validates every link, scene and generated file.
+
+<img src="https://img.shields.io/badge/123_pages-0b1020?style=flat-square" alt="123 pages" /> <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" /> <img src="https://img.shields.io/badge/Mermaid-FF3670?style=flat-square&logo=mermaid&logoColor=white" alt="Mermaid" /> <img src="https://img.shields.io/badge/CI_validated-22d3ee?style=flat-square&logo=githubactions&logoColor=0b1020" alt="CI validated" />
 
 </td>
 <td width="50%" valign="top">
 
-### 📐 [system-design-handbook](https://github.com/SAGARCHRY0777/system-design-handbook)
-The **45‑minute interview round** — a repeatable framework, the building blocks, and 8 worked designs with the trade‑offs stated out loud.
+#### 📉 [anomaly-detection-lab](https://github.com/SAGARCHRY0777/anomaly-detection-lab)
+**Unsupervised anomaly detection** for multivariate sensor time series, taught from first principles — every algorithm implemented from scratch in NumPy, derived in the notes, checked by a regression suite in CI.
 
-<img src="https://img.shields.io/badge/System_Design-0b1020?style=flat-square" alt="System design" /> <img src="https://img.shields.io/badge/29_pages-0b1020?style=flat-square" alt="29 pages" /> <img src="https://img.shields.io/badge/GitHub_Pages-222222?style=flat-square&logo=githubpages&logoColor=white" alt="GitHub Pages" />
+<img src="https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white" alt="NumPy" /> <img src="https://img.shields.io/badge/from_scratch-0b1020?style=flat-square" alt="Implemented from scratch" /> <img src="https://img.shields.io/badge/time_series-0b1020?style=flat-square" alt="Time series" /> <img src="https://img.shields.io/badge/pytest-0A9EDC?style=flat-square&logo=pytest&logoColor=white" alt="pytest" />
+
+</td>
+</tr>
+</table>
+
+### 📚 Handbooks — 136 pages, every one with a live simulation
+
+<table border="0">
+<tr>
+<td width="50%" valign="top">
+
+#### 🤖 [llm-handbook](https://github.com/SAGARCHRY0777/llm-handbook) · [▸ live](https://sagarchry0777.github.io/llm-handbook/)
+Building, testing and operating **LLM systems** — RAG, evaluation, serving, agents — each topic at three depths and from seven seats. **47 simulations and 26 in‑browser labs** that compute on your own input.
+
+<img src="https://img.shields.io/badge/47_pages-0b1020?style=flat-square" alt="47 pages" /> <img src="https://img.shields.io/badge/47_sims_·_26_labs-22d3ee?style=flat-square&labelColor=0b1020" alt="47 simulations and 26 labs" /> <img src="https://img.shields.io/badge/RAG_·_Evals_·_Agents-0b1020?style=flat-square" alt="RAG, evaluation, agents" />
+
+</td>
+<td width="50%" valign="top">
+
+#### 📐 [system-design-handbook](https://github.com/SAGARCHRY0777/system-design-handbook) · [▸ live](https://sagarchry0777.github.io/system-design-handbook/)
+The **45‑minute interview round** — a repeatable framework, the building blocks, and worked designs with the trade‑offs stated out loud.
+
+<img src="https://img.shields.io/badge/41_pages-0b1020?style=flat-square" alt="41 pages" /> <img src="https://img.shields.io/badge/41_sims-818cf8?style=flat-square&labelColor=0b1020" alt="41 simulations" /> <img src="https://img.shields.io/badge/GitHub_Pages-222222?style=flat-square&logo=githubpages&logoColor=white" alt="GitHub Pages" />
 
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
 
-### 🛰️ [lidar-image_object-detection](https://github.com/SAGARCHRY0777/lidar-image_object-detection)
+#### 🧮 [dsa-handbook](https://github.com/SAGARCHRY0777/dsa-handbook) · [▸ live](https://sagarchry0777.github.io/dsa-handbook/)
+A **problem‑first** companion for interview prep. Not another explanation of what a hash map is — a curated ladder of problems per pattern, with worked solutions and the recurrence spelled out.
+
+<img src="https://img.shields.io/badge/41_pages-0b1020?style=flat-square" alt="41 pages" /> <img src="https://img.shields.io/badge/41_sims-a78bfa?style=flat-square&labelColor=0b1020" alt="41 simulations" /> <img src="https://img.shields.io/badge/problem_first-0b1020?style=flat-square" alt="Problem first" />
+
+</td>
+<td width="50%" valign="top">
+
+#### 🌿 [git-handbook](https://github.com/SAGARCHRY0777/git-handbook) · [▸ live](https://sagarchry0777.github.io/git-handbook/)
+Git, GitHub and GitLab: the **mental model**, the state transitions, and how to get out of trouble when the history is already wrong.
+
+<img src="https://img.shields.io/badge/7_pages-0b1020?style=flat-square" alt="7 pages" /> <img src="https://img.shields.io/badge/7_sims-f472b6?style=flat-square&labelColor=0b1020" alt="7 simulations" /> <img src="https://img.shields.io/badge/Git_·_GitHub_·_GitLab-0b1020?style=flat-square" alt="Git, GitHub, GitLab" />
+
+</td>
+</tr>
+</table>
+
+### 🛰️ Computer Vision · 🌐 The Site
+
+<table border="0">
+<tr>
+<td width="50%" valign="top">
+
+#### 🚗 [lidar-image_object-detection](https://github.com/SAGARCHRY0777/lidar-image_object-detection)
 **FPN‑ResNet + YOLO fusion** for 3D object detection across LiDAR point clouds and camera frames on KITTI.
 
 <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" alt="PyTorch" /> <img src="https://img.shields.io/badge/YOLO-111111?style=flat-square&logo=yolo&logoColor=00FFFF" alt="YOLO" /> <img src="https://img.shields.io/badge/LiDAR-0b1020?style=flat-square&logoColor=white" alt="LiDAR" /> <img src="https://img.shields.io/badge/KITTI-0b1020?style=flat-square" alt="KITTI" />
@@ -150,10 +216,10 @@ The **45‑minute interview round** — a repeatable framework, the building blo
 </td>
 <td width="50%" valign="top">
 
-### 🤖 [llm-handbook](https://github.com/SAGARCHRY0777/llm-handbook)
-Building, testing and operating **LLM systems** — RAG, evaluation, serving, agents — each topic at three depths and from seven seats.
+#### 🌐 [sagarchry0777.github.io](https://github.com/SAGARCHRY0777/SAGARCHRY0777.github.io) · [▸ live](https://sagarchry0777.github.io)
+Personal site and the **hub every handbook hangs off** — one Search Console property, one sitemap tree, 137 indexed URLs.
 
-<img src="https://img.shields.io/badge/LLM-0b1020?style=flat-square" alt="LLM" /> <img src="https://img.shields.io/badge/RAG-0b1020?style=flat-square" alt="RAG" /> <img src="https://img.shields.io/badge/Evaluation-0b1020?style=flat-square" alt="Evaluation" /> <img src="https://img.shields.io/badge/Agents-0b1020?style=flat-square" alt="Agents" />
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5" /> <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3" /> <img src="https://img.shields.io/badge/SEO-indexed-22d3ee?style=flat-square&labelColor=0b1020" alt="SEO indexed" />
 
 </td>
 </tr>
