@@ -28,7 +28,7 @@ jobs:
     timeout-minutes: 10
     steps:
       - name: Generate snake SVG / GIF
-        uses: Platane/snk@v3
+        uses: Platane/snk@d8f6715049803e982ee5ff501b6b9b7d5deeb09b  # v3.5.0
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
@@ -37,7 +37,7 @@ jobs:
             dist/snake.gif?color_snake=#22d3ee&color_dots=#111827,#1e3a5f,#0e7490,#22d3ee,#a5f3fc
 
       - name: Publish to `output` branch
-        uses: crazy-max/ghaction-github-pages@v4
+        uses: crazy-max/ghaction-github-pages@df5cc2bfa78282ded844b354faee141f06b41865  # v4
         with:
           target_branch: output
           build_dir: dist

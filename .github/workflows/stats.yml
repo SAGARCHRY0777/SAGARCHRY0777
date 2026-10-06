@@ -45,7 +45,7 @@ jobs:
           GH_USER: ${{ github.repository_owner }}
 
       - name: Publish to `metrics` branch
-        uses: crazy-max/ghaction-github-pages@v4
+        uses: crazy-max/ghaction-github-pages@df5cc2bfa78282ded844b354faee141f06b41865  # v4
         with:
           target_branch: metrics
           build_dir: dist
